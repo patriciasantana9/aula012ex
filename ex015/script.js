@@ -1,8 +1,13 @@
+/* var img = document.createElement('img')
+       img.setAttribute('id', 'foto') //o mesmo que ir ao HTML e colocar <div id="foto></div>"
+        if(idade >= 0 && idade < 10) {
+            img.setAttribute('src', 'bebe-h.png') */
+
 function verificar() {
     var data = new Date()
-    var ano = data.getFullYear()
-    var fano = document.getElementById('txtano') //aquele input em "ano de nascimento" no HTML 
-    var res = document.querySelector('div#res')
+    var ano = data.getFullYear() //precisa saber qual o ano no sistema
+    var fano = document.getElementById('txtano') //precisa saber em que ano a pessoa nasceu. Aquele input em "ano de nascimento" no HTML 
+    var res = document.querySelector('div#res') //texto a ser substituido depois
     if (fano.value.length === 0 || Number(fano.value) > ano) {
         window.alert('Verifique os dados e tente novamente!')
     } else {
